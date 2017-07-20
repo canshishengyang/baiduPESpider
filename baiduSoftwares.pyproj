@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1c826702-8f2c-44db-97ad-2b30ec8f8a18}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="baiduSoftwares\com_db_ctrl\com_dbctrl.py" />
+    <Compile Include="baiduSoftwares\com_db_ctrl\__init__.py" />
+    <Compile Include="baiduSoftwares\com_fm.py" />
+    <Compile Include="baiduSoftwares\DAO.py" />
+    <Compile Include="baiduSoftwares\db_operation.py" />
+    <Compile Include="baiduSoftwares\items.py" />
+    <Compile Include="baiduSoftwares\middlewares.py" />
+    <Compile Include="baiduSoftwares\pipelines.py" />
+    <Compile Include="baiduSoftwares\settings.py" />
+    <Compile Include="baiduSoftwares\spiders\baiduSpider.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="baiduSoftwares\spiders\__init__.py" />
+    <Compile Include="baiduSoftwares\udload.py" />
+    <Compile Include="baiduSoftwares\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="baiduSoftwares" />
+    <Folder Include="baiduSoftwares\com_db_ctrl\" />
+    <Folder Include="baiduSoftwares\spiders" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="baiduSoftwares\com_db_ctrl\com_dbctrl.pyc" />
+    <Content Include="baiduSoftwares\com_db_ctrl\__init__.pyc" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
